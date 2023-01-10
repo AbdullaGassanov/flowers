@@ -1,0 +1,47 @@
+.plants {
+	margin: 4rem auto;
+
+	text-align: center;
+	width: 100%;
+
+	&__title {
+		font-size: 4rem;
+		margin-bottom: 2rem;
+		display: inline-block;
+
+		border-bottom: 0.4rem solid $color-primary;
+	}
+
+	&__sub-title {
+		font-size: 1.8rem;
+	}
+
+	&__gallery {
+		margin: 2rem 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(33rem, max-content));
+	}
+
+	&__img-card {
+		margin: 1rem;
+
+		border: 2px solid $color-gray-dark;
+		text-align: left;
+	}
+
+	&__name {
+		padding: 1rem;
+		font-size: 2.5rem;
+		font-weight: 600;
+	}
+
+	&__info {
+		padding: 1rem;
+		font-size: 1.8rem;
+	}
+
+	&__img {
+		width: 100%;
+		border: none;
+	}
+}

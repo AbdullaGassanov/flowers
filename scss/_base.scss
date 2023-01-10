@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+
+	font-size: 62.5%; //1rem = 10px , 10px/16px = 62.5%
+}
+
+body {
+	box-sizing: border-box;
+	font-family: Poppins, sans-serif;
+
+	overflow: hidden;
+}
+
+.showBackground {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	background-image: url("../Img/loading.gif");
+	background-position: center;
+	background-size: 300px;
+	background-repeat: no-repeat;
+	z-index: 12;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.svg {
+	width: 2rem;
+	height: 2rem;
+	fill: green;
+}
+
+.container {
+	max-width: 120rem;
+	margin: auto;
+}
+
+.short {
+	max-width: 110rem;
+	margin: auto;
+	padding: 3rem 0;
+}
+
+.btn {
+	transition: 0.2s;
+	color: #fff;
+	text-decoration: none;
+	background-color: $color-black;
+	border-radius: 5px;
+	margin-right: 2rem;
+	padding: 1.3rem 3rem;
+	margin-top: 4rem;
+	display: inline-block;
+	font-size: 1.7rem;
+
+	&:hover {
+		background-color: $color-primary;
+		transition: 0.2s;
+	}
+
+	&--white {
+		background-color: #fff;
+		color: $color-black;
+		padding: 1.3rem 5rem;
+		&:hover {
+			background-color: $color-black;
+			color: #fff;
+
+			transition: 0.2s;
+		}
+	}
+
+	&--red {
+		background-color: #ff0000;
+		color: #fff;
+		padding: 1.3rem 5rem;
+		&:hover {
+			background-color: $color-black;
+			transition: 0.2s;
+		}
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}

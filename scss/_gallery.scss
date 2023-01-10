@@ -1,0 +1,111 @@
+.gallery {
+	width: 100%;
+	height: max-content;
+	display: block;
+
+	&__content {
+		padding: 1rem 2rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr 2fr;
+		grid-template-rows: repeat(2, minmax(35rem, 1fr));
+		grid-template-areas:
+			"img1 img2 img3  "
+			"img4 img5 img6 ";
+	}
+
+	&__title {
+		font-size: 5rem;
+		font-weight: 600;
+		padding-bottom: 0.1rem;
+		border-bottom: 0.5rem solid $color-primary;
+		display: inline-block;
+		margin-bottom: 3rem;
+	}
+
+	&__box {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		margin: 0.5rem;
+		transition: 0.3s;
+
+		&-link {
+			opacity: 0;
+			visibility: hidden;
+			padding: 1rem 3rem;
+			border: 2px solid rgb(255, 255, 255);
+			background-color: transparent;
+			color: #fff;
+			font-size: 1.3rem;
+			font-weight: 600;
+			text-decoration: none;
+			transition: 0.2s;
+		}
+
+		&:hover &-link {
+			display: block;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.img1 {
+	grid-area: img1;
+	background-image: url("../Img/1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	&:hover {
+		background-image: linear-gradient(rgba(green, 0.9)), url("../Img/1.jpg");
+	}
+}
+
+.img2 {
+	grid-area: img2;
+	background-image: url("../Img/2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	&:hover {
+		background-image: linear-gradient(rgba(green, 0.9)), url("../Img/2.jpg");
+	}
+}
+
+.img3 {
+	grid-area: img3;
+	background-image: url("../Img/3.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	&:hover {
+		background-image: linear-gradient(rgba(green, 0.9)), url("../Img/3.jpg");
+	}
+}
+
+.img4 {
+	grid-area: img4;
+	background-image: url("../Img/4.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	&:hover {
+		background-image: linear-gradient(rgba(green, 0.9)), url("../Img/4.jpg");
+	}
+}
+
+.img5 {
+	grid-area: img5;
+	background-image: url("../Img/5.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	&:hover {
+		background-image: linear-gradient(rgba(green, 0.9)), url("../Img/5.jpg");
+	}
+}
+
+.img6 {
+	grid-area: img6;
+	background-image: url("../Img/6.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	&:hover {
+		background-image: linear-gradient(rgba(green, 0.9)), url("../Img/6.jpg");
+	}
+}

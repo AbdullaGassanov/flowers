@@ -1,0 +1,83 @@
+.header {
+	padding: 2rem 0;
+	background-image: url("../Img/banner.jpg");
+	background-size: cover;
+	background-position: left center;
+	height: 80vh;
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		width: 15rem;
+		height: 4.5rem;
+	}
+
+	&__menu {
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&-item {
+			padding-right: 4rem;
+			font-size: 1.3rem;
+			font-weight: 600;
+		}
+
+		&-link {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $color-black-light;
+
+			&--active {
+				color: $color-primary;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&-left {
+			flex: 1;
+		}
+		&-right {
+			flex: 1;
+		}
+	}
+
+	&__title {
+		font-size: 5rem;
+
+		&--green {
+			display: block;
+			color: $color-primary;
+			margin: 0;
+			padding: 0;
+			font-weight: 600;
+		}
+
+		&--black-bold {
+			display: block;
+			font-weight: 800;
+			margin-top: -2rem;
+			padding: 0;
+		}
+	}
+
+	&__text {
+		width: 96%;
+		font-size: 1.4rem;
+		color: $color-black-light;
+	}
+
+	&__img {
+		height: 90%;
+		width: 90%;
+	}
+}

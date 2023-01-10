@@ -1,0 +1,44 @@
+.about {
+	margin: 2rem 0;
+	padding: 2rem;
+	height: max-content;
+	width: 100%;
+	background-image: url("/Img/about-bg.jpg");
+	background-size: cover;
+	color: #fff;
+
+	&__col {
+		flex: 1;
+	}
+
+	&__num {
+		font-size: 5rem;
+	}
+
+	&__activity {
+		background-color: #fff;
+		color: $color-black;
+		font-size: 4rem;
+		margin-bottom: 2rem;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 5rem;
+	}
+
+	&__text {
+		font-size: 1.7rem;
+		line-height: 1.4;
+	}
+
+	&__title {
+		font-size: 5rem;
+		padding-bottom: 0.1rem;
+		display: inline-block;
+		margin-bottom: 2rem;
+		border-bottom: 0.6rem solid #fff;
+	}
+}
