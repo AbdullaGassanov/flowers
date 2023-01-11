@@ -3,6 +3,7 @@
 
 	text-align: center;
 	width: 100%;
+	transition: 0.2s;
 
 	&__title {
 		font-size: 4rem;
@@ -19,7 +20,7 @@
 	&__gallery {
 		margin: 2rem 0;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(33rem, max-content));
+		grid-template-columns: repeat(auto-fit, minmax(30rem, max-content));
 	}
 
 	&__img-card {

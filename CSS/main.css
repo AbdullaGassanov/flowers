@@ -9,6 +9,9 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   font-size: 62.5%;
 }
 
@@ -16,6 +19,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Poppins, sans-serif;
+  font-size: inherit;
   overflow: hidden;
 }
 
@@ -130,9 +134,85 @@ body {
   -webkit-align-items: center;
           align-items: center;
 }
+.header__hamburg {
+  display: none;
+}
+.header__hamburg:checked + ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
 .header__logo {
   width: 15rem;
   height: 4.5rem;
+}
+.header__hamburger {
+  z-index: 10;
+  display: none;
+  position: relative;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 50%;
+  -o-transition: 50%;
+  transition: 50%;
+  width: 50%;
+  text-align: right;
+  background-color: #308409;
+  padding: 0.5rem;
+}
+.header__hamburger--icon {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 0.9;
+  cursor: pointer;
+}
+.header__hum-menu {
+  z-index: 10;
+  list-style: none;
+  text-align: left;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+  visibility: hidden;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.header__hum-menu-item {
+  padding: 0.2rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  border-bottom: 1px solid rgb(197, 197, 197);
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  width: 95%;
+}
+.header__hum-menu-item:hover {
+  background-color: #308409;
+  color: #fff;
+}
+.header__hum-menu-link {
+  text-decoration: none;
+  padding: 1rem 1rem;
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color: rgb(0, 0, 0);
+}
+.header__hum-menu-link:hover {
+  color: #fff;
 }
 .header__menu {
   list-style: none;
@@ -148,7 +228,7 @@ body {
 }
 .header__menu-item {
   padding-right: 4rem;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 .header__menu-link {
@@ -210,6 +290,9 @@ body {
   margin: 4rem auto;
   text-align: center;
   width: 100%;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .plants__title {
   font-size: 4rem;
@@ -223,8 +306,8 @@ body {
 .plants__gallery {
   margin: 2rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(33rem, -webkit-max-content));
-  grid-template-columns: repeat(auto-fit, minmax(33rem, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, max-content));
 }
 .plants__img-card {
   margin: 1rem;
@@ -618,4 +701,120 @@ input[type=submit] {
 }
 .copyright__text {
   font-size: 2rem;
+}
+
+@media (max-width: 1130px) {
+  html {
+    font-size: 50.5%;
+  }
+  .header {
+    height: 70vh;
+  }
+}
+@media (max-width: 920px) {
+  .header {
+    height: 60vh;
+  }
+  .plants__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header__content {
+    font-size: 40.5%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+  }
+  .header__content-left {
+    padding-left: 2rem;
+  }
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 40.5%;
+  }
+  .contact {
+    padding: 0 1rem;
+    text-align: center;
+  }
+  .contact__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact__map {
+    height: 40rem;
+  }
+  .contact__banner-text {
+    padding: 8rem 2rem;
+    margin: 3rem;
+  }
+  .gallery__content {
+    padding: 0 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 40rem);
+    grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6";
+  }
+  .header {
+    height: 65vh;
+    padding: 1rem;
+  }
+  .header__head {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__logo {
+    margin-right: 1rem;
+  }
+  .header__content {
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: -10rem;
+    width: 60%;
+  }
+  .header__content-left {
+    padding: 0 6rem;
+  }
+  .header__content-right {
+    display: none;
+  }
+  .header__hamburger {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
+  .plants__gallery {
+    grid-template-columns: 1fr;
+  }
+  .header__head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+  }
+  .header__logo {
+    margin: 2rem;
+    height: 10rem;
+    width: 50%;
+  }
 }/*# sourceMappingURL=main.css.map */

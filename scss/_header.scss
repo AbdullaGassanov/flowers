@@ -11,9 +11,80 @@
 		align-items: center;
 	}
 
+	&__hamburg {
+		display: none;
+		&:checked + ul {
+			display: block;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
 	&__logo {
 		width: 15rem;
 		height: 4.5rem;
+	}
+
+	&__hamburger {
+		z-index: 10;
+		display: none;
+		position: relative;
+		transition: 0.2s;
+		opacity: 0;
+		visibility: hidden;
+		transition: 50%;
+		width: 50%;
+		text-align: right;
+		background-color: $color-primary;
+		padding: 0.5rem;
+		&--icon {
+			transition: 0.2s;
+			color: #fff;
+			font-size: 4rem;
+			font-weight: 600;
+			line-height: 0.9;
+			cursor: pointer;
+		}
+	}
+
+	&__hum-menu {
+		z-index: 10;
+
+		list-style: none;
+		text-align: left;
+		position: absolute;
+		transition: 0.4s;
+		opacity: 0;
+		visibility: hidden;
+		top: 5rem;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+
+		&-item {
+			padding: 0.2rem 1rem;
+			font-size: 1.3rem;
+			font-weight: 400;
+			border-bottom: 1px solid rgb(197, 197, 197);
+			transition: 0.2s;
+			width: 95%;
+			&:hover {
+				background-color: $color-primary;
+				color: #fff;
+			}
+		}
+
+		&-link {
+			text-decoration: none;
+			padding: 1rem 1rem;
+			display: inline-block;
+			transition: 0.3s;
+
+			color: rgb(0, 0, 0);
+			&:hover {
+				color: #fff;
+			}
+		}
 	}
 
 	&__menu {
@@ -24,7 +95,7 @@
 
 		&-item {
 			padding-right: 4rem;
-			font-size: 1.3rem;
+			font-size: 1.8rem;
 			font-weight: 600;
 		}
 
